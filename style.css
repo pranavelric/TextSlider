@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow: hidden;
+}
+
+.center_div {
+  background-color: #2f3542;
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.center_div h1 {
+  font-family: 'Fredoka One', cursive;
+  overflow: hidden;
+  color: white;
+  font-size: 7rem;
+  position: relative;
+}
+
+.center_div h1::before {
+  overflow: hidden;
+  color: lime;
+  position: absolute;
+  width: 100%;
+  content: 'Kaizoku Ou ni, ore wa naru!  ';
+  top: 0;
+  left: 0;
+  border-right: 0.3rem solid lime;
+  -webkit-animation: slide 3s linear infinite;
+          animation: slide 3s linear infinite;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 105%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes slide {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 105%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@media (max-width: 973px) {
+  .center_div h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 695px) {
+  .center_div h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 557px) {
+  .center_div h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 417px) {
+  .center_div h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 279px) {
+  .center_div h1 {
+    font-size: 1rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

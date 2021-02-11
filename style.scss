@@ -1,0 +1,117 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@mixin h1FontSize($size) {
+    
+    .center_div{
+       
+        & h1{
+          
+            font-size:$size;
+            
+        }
+    }
+
+
+
+}
+
+html{
+    font-size: 62.5%;
+    overflow: hidden;
+}
+
+.center_div{
+    
+    background-color:#2f3542;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    & h1{
+        font-family: 'Fredoka One', cursive;
+     overflow: hidden;
+        color: white;
+        font-size: 7rem;
+        position: relative;
+
+        &::before{
+            overflow: hidden;
+            color: rgb(0, 255, 0);
+            position: absolute;
+            width: 100%;
+            content: 'Kaizoku Ou ni, ore wa naru!  ';
+        top: 0;
+        left: 0;
+        border-right: 0.3rem solid rgb(0, 255, 0);
+    animation: slide 3s linear infinite;    
+    }
+        
+    }
+}
+
+
+@keyframes slide{
+
+0%{
+width: 0%;
+}
+
+50%{
+    width: 105%;
+    }
+    
+    100%{
+        width: 0%;
+        }
+        
+            
+
+
+
+
+}
+
+
+
+
+
+@media(max-width:973px){
+
+
+@include h1FontSize(5rem);
+
+}
+
+@media(max-width:695px){
+
+    @include h1FontSize(4rem);
+
+   
+}
+
+@media(max-width:557px){
+
+    @include h1FontSize(3rem);
+
+}
+
+@media(max-width:417px){
+
+    @include h1FontSize(2rem);
+ 
+}
+
+@media(max-width:279px){
+
+    @include h1FontSize(1rem);
+   
+}
